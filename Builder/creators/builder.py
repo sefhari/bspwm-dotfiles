@@ -2,7 +2,7 @@ import os
 import packages
 
 from logger import Logger, LoggerStatus
-from creators.software import AurBuilder, FirefoxCustomize, OhMyZSH
+from creators.software import AurBuilder, Chaotic, FirefoxCustomize, OhMyZSH
 from creators.drivers import GraphicDrivers
 from creators.patches import PatchSystemBugs
 from creators.daemons import Daemons
@@ -26,6 +26,7 @@ class SystemConfiguration:
     def __start_option_1():
         SystemConfiguration.__create_default_folders()
         SystemConfiguration.__copy_bspwm_dotfiles()
+        Chaotic.build()
 
     @staticmethod
     def __start_option_2():
