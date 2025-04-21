@@ -4,7 +4,7 @@ class PatchSystemBugs:
     @staticmethod
     def enable_all_patches():
         PatchSystemBugs.__fix_xterm_error_in_thunar()
-        PatchSystemBugs.__make_fish_the_default()
+        PatchSystemBugs.__make_zsh_the_default()
         PatchSystemBugs.__assign_permissions_to_configs()
 
     @staticmethod
@@ -12,8 +12,8 @@ class PatchSystemBugs:
         os.system("sudo ln -sf /usr/bin/alacritty /usr/bin/xterm")
 
     @staticmethod
-    def __make_fish_the_default():
-        os.system("chsh -s /usr/bin/fish")
+    def __make_zsh_the_default():
+        os.system("chsh -s /usr/bin/zsh")
 
     @staticmethod
     def __assign_permissions_to_configs():

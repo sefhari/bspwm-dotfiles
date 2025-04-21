@@ -11,7 +11,7 @@ class UserInterface:
 
     @staticmethod
     def welcome_banner():
-        os.system("sh Builder/assets/startup.sh")        
+        os.system("sh Builder/assets/startup.sh")
 
     @staticmethod
     def is_verify_response(text) -> bool:
@@ -24,7 +24,7 @@ class UserInterface:
     def get_params():
         print("1) Install all dotfiles? [Y/n]: ", end="")
         option_1 = UserInterface.is_verify_response(input())
-        
+
         print("2) Update Arch DataBase? [Y/n] ", end="")
         option_2 = UserInterface.is_verify_response(input())
 
@@ -33,7 +33,7 @@ class UserInterface:
 
         print("4) Install Dev Dependencies? [Y/n] ", end="")
         option_4 = UserInterface.is_verify_response(input())
-        
+
         print("5) Install Nvidia & Intel Drivers? [Y/n] ", end="")
         option_5 = UserInterface.is_verify_response(input())
 

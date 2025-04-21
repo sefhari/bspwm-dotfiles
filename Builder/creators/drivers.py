@@ -9,14 +9,6 @@ class GraphicDrivers:
         print(f"--The function will be deleted--")
         GraphicDrivers.__prepare_multilib()
         GraphicDrivers.__update_multilib_repo()
-        GraphicDrivers.__install_hybrid_drivers()
-
-    @staticmethod
-    def __install_hybrid_drivers():
-        Logger.add_record("[+] Install Nvidia & Intel Drivers", status=LoggerStatus.SUCCESS)
-        os.system("sudo pacman -S mesa")
-        os.system("sudo pacman -S lib32-mesa")
-        os.system("sudo pacman -S xf86-video-nouveau xf86-video-intel vulkan-intel")
 
     @staticmethod
     def __prepare_multilib():

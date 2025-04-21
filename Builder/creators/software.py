@@ -15,3 +15,10 @@ class FirefoxCustomize:
         os.system("timeout 10 firefox --headless")
         os.system("sh firefox/install.sh")
         Logger.add_record(f"[+] Firefox styles installed", status=LoggerStatus.SUCCESS)
+
+
+class OhMyZSH:
+    @staticmethod
+    def build():
+        os.system("sh -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'")
+        Logger.add_record(f"[+] Oh my ZSH installed", status=LoggerStatus.SUCCESS)

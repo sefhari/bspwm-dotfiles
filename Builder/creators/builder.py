@@ -2,7 +2,7 @@ import os
 import packages
 
 from logger import Logger, LoggerStatus
-from creators.software import AurBuilder, FirefoxCustomize
+from creators.software import AurBuilder, FirefoxCustomize, OhMyZSH
 from creators.drivers import GraphicDrivers
 from creators.patches import PatchSystemBugs
 from creators.daemons import Daemons
@@ -39,6 +39,7 @@ class SystemConfiguration:
         SystemConfiguration.__install_pacman_package(packages.BASE_PACKAGES)
         SystemConfiguration.__install_aur_package(packages.AUR_PACKAGES)
         FirefoxCustomize.build()
+        OhMyZSH.build()
 
     @staticmethod
     def __start_option_4():
