@@ -33,3 +33,4 @@ class Chaotic:
         with open('/etc/pacman.conf', 'a') as file:
             file.write('[chaotic-aur]')
             file.write('Include = /etc/pacman.d/chaotic-mirrorlist')
+        Logger.add_record(f"[+] Added Chaotic to repositories", status=LoggerStatus.SUCCESS)
