@@ -17,7 +17,6 @@ class SystemConfiguration:
         if args[1]: SystemConfiguration.__start_option_2()
         if args[2]: SystemConfiguration.__start_option_3()
         if args[3]: SystemConfiguration.__start_option_4()
-        if args[4]: GraphicDrivers.build()
         # TODO: The process should not be repeated when reassembling, important components should only be updated with new ones
         Daemons.enable_all_daemons()
         PatchSystemBugs.enable_all_patches()
@@ -71,15 +70,15 @@ class SystemConfiguration:
                           "~/Music ~/Desktop"
         os.system("mkdir -p ~/.config")
         os.system(f"mkdir -p {default_folders}")
-        os.system("cp -r Images/ ~/")
+        os.system("cp -r ./Images/ ~/")
 
     @staticmethod
     def __copy_bspwm_dotfiles():
         Logger.add_record("[+] Copy Dotfiles & GTK", status=LoggerStatus.SUCCESS)
-        os.system("cp -r config/* ~/.config/")
-        os.system("cp Xresources ~/.Xresources")
-        os.system("cp gtkrc-2.0 ~/.gtkrc-2.0")
-        os.system("cp -r local ~/.local")
-        os.system("cp -r themes ~/.themes")
-        os.system("cp xinitrc ~/.xinitrc")
-        os.system("cp -r bin/ ~/")
+        os.system("cp -r ./config/* ~/.config/")
+        os.system("cp ./Xresources ~/.Xresources")
+        os.system("cp ./gtkrc-2.0 ~/.gtkrc-2.0")
+        os.system("cp -r ./local ~/.local")
+        os.system("cp -r ./themes ~/.themes")
+        os.system("cp ./xinitrc ~/.xinitrc")
+        os.system("cp -r ./bin/ ~/")
