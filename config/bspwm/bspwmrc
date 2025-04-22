@@ -58,3 +58,4 @@ picom --config $HOME/.config/bspwm/picom_configurations/1.conf &
 
 # autostart
 flameshot &
+copyq --start-server
