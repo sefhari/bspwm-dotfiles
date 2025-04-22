@@ -25,7 +25,6 @@ class SystemConfiguration:
     def __start_option_1():
         SystemConfiguration.__create_default_folders()
         SystemConfiguration.__copy_bspwm_dotfiles()
-        Chaotic.build()
 
     @staticmethod
     def __start_option_2():
@@ -75,10 +74,10 @@ class SystemConfiguration:
     @staticmethod
     def __copy_bspwm_dotfiles():
         Logger.add_record("[+] Copy Dotfiles & GTK", status=LoggerStatus.SUCCESS)
-        os.system("cp -r ./config/* ~/.config/")
-        os.system("cp ./Xresources ~/.Xresources")
-        os.system("cp ./gtkrc-2.0 ~/.gtkrc-2.0")
-        os.system("cp -r ./local ~/.local")
-        os.system("cp -r ./themes ~/.themes")
-        os.system("cp ./xinitrc ~/.xinitrc")
-        os.system("cp -r ./bin/ ~/")
+        os.system("cp -r ../config/* ~/.config/")
+        os.system("cp ../Xresources ~/.Xresources")
+        os.system("cp ../gtkrc-2.0 ~/.gtkrc-2.0")
+        os.system("cp -r ../local ~/.local")
+        os.system("cp -r ../themes ~/.themes")
+        os.system("cp ../xinitrc ~/.xinitrc")
+        os.system("cp -r ../bin/ ~/")

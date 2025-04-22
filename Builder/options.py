@@ -6,8 +6,8 @@ class UserInterface:
     @staticmethod
     def start():
         UserInterface.welcome_banner()
-        install_params = UserInterface.get_params()
-        SystemConfiguration.start(*install_params)
+        args = UserInterface.get_params()
+        SystemConfiguration.start(*args)
 
     @staticmethod
     def welcome_banner():
@@ -34,7 +34,4 @@ class UserInterface:
         print("4) Install Dev Dependencies? [Y/n] ", end="")
         option_4 = UserInterface.is_verify_response(input())
 
-        print("5) Install Nvidia & Intel Drivers? [Y/n] ", end="")
-        option_5 = UserInterface.is_verify_response(input())
-
-        return [option_1, option_2, option_3, option_4, option_5]
+        return [option_1, option_2, option_3, option_4]
